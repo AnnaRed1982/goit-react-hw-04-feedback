@@ -1,0 +1,17 @@
+.option {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+
+  min-width: 60px;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 4px;
+  background-color: rgb(245, 248, 248);
+}
+
+button::first-letter {
+  text-transform: uppercase;
+}
