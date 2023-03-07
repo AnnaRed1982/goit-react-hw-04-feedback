@@ -25,10 +25,7 @@ export function App() {
     }
   };
 
-  let options = {};
-  options.good = good;
-  options.bad = bad;
-  options.neutral = neutral;
+  let options = { good, neutral, bad };
 
   const countTotalFeedback = () => {
     const values = Object.values(options);
@@ -39,7 +36,7 @@ export function App() {
     return total;
   };
 
-  const countPositiveFeedback = (good, neutral, total) => {
+  const countPositiveFeedback = () => {
     let positivePercentage;
 
     total === 0
@@ -50,7 +47,7 @@ export function App() {
   };
 
   let total = countTotalFeedback();
-  let positivePercentage = countPositiveFeedback(good, neutral, total);
+  let positivePercentage = countPositiveFeedback();
 
   return (
     <div>
